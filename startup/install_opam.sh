@@ -7,8 +7,8 @@ if which opam >/dev/null; then
   exit
 fi
 
-wget https://raw.github.com/ocaml/opam/master/shell/opam_installer.sh -O /tmp/opam_installer.sh
-sh /tmp/opam_installer.sh /usr/local/bin
-rm -f /tmp/opam_installer.sh
+wget https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh -O /tmp/install.sh
+yes '' | sh /tmp/install.sh
+rm -f /tmp/install.sh
 
 # EOF

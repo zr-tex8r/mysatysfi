@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     add-apt-repository -y ppa:hadret/fswatch
     apt-get update -y
-    apt-get install -y build-essential git autoconf m4 unzip wget
+    apt-get install -y build-essential git autoconf m4 unzip wget ruby
     apt-get install -y fswatch perl
     apt-get update -y
     bash /vagrant/startup/install_opam.sh

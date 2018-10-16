@@ -25,12 +25,7 @@ Vagrant運用のWindowsマシンでもSATySFiしたいやつ
 ライセンス
 ----------
 
-`startup/`内のフォントファイルは各々のライセンスに従う。
-
-  * `ipaex*.ttf`：IPAフォントライセンスv1.0
-  * `Junicode*.ttf`： OFL v1.1
-
-上記以外のコンテンツはMITライセンスに従う。
+MITライセンスに従う。
 
 --------------------
 Takayuki YATO (aka. "ZR")  

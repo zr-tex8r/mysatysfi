@@ -12,8 +12,9 @@ if [ -d ~/.satysfi ]; then
 fi
 
 # initialize opam
-opam init --auto-setup --comp=4.06.0
-eval `opam config env`
+opam init --auto-setup --comp=4.06.0 --disable-sandboxing
+eval `opam env`
+opam repository add satysfi-external https://github.com/gfngfn/satysfi-external-repo.git
 opam update
 
 # fetch source
@@ -22,14 +23,11 @@ cd SATySFi
 git submodule update --init --recursive
 
 # build
-opam pin add -y jbuilder 1.0+beta17
 opam pin add -y satysfi .
 opam install -y satysfi
 
 # postprocess
 PFX=`which satysfi`
 ln -s ${PFX%/bin/satysfi}/share/satysfi ~/.satysfi
-cp -p $STARTUP_DIR/*.ttf ~/.satysfi/dist/fonts/
-chmod 644 ~/.satysfi/dist/fonts/*.ttf
 
 # EOF
